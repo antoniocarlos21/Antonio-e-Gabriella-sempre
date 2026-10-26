@@ -1,0 +1,1182 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#190b15">
+<title>Para Gabriella ♡</title>
+
+<style>
+:root {
+  --bg: #190b15;
+  --panel: #2b1422;
+  --pink: #ff91b8;
+  --soft: #d9bac8;
+  --text: #fff2f6;
+  --gold: #f3d8ad;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at top, #612c49 0%, var(--bg) 65%);
+  font-family: system-ui, sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+button, a { font: inherit; }
+button { touch-action: manipulation; }
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #190b15e8;
+  border-bottom: 1px solid #ffffff18;
+  backdrop-filter: blur(15px);
+}
+
+nav {
+  width: min(1100px, 94%);
+  min-height: 65px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  font: 1.2rem Georgia, serif;
+  color: var(--pink);
+  white-space: nowrap;
+}
+
+.links {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  white-space: nowrap;
+  font-size: .82rem;
+}
+
+.links a {
+  color: var(--soft);
+  text-decoration: none;
+}
+
+.links a:hover { color: var(--pink); }
+
+.container {
+  width: min(1000px, 92%);
+  margin: auto;
+}
+
+section {
+  padding: 70px 0;
+  scroll-margin-top: 70px;
+}
+
+.hero {
+  min-height: 90svh;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 35px;
+  padding-top: 45px;
+}
+
+.hero-texto { text-align: center; }
+
+.etiqueta {
+  color: var(--pink);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  line-height: 1.16;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 10vw, 5.3rem);
+  margin: 15px 0;
+  animation: entrada 1s both;
+}
+
+h1 span {
+  display: inline-block;
+  color: var(--pink);
+  font-style: italic;
+  animation: entrada 1.3s .3s both;
+}
+
+h2 {
+  font-size: clamp(2.1rem, 7vw, 3.4rem);
+  margin: 10px 0;
+}
+
+h3 { font-size: 1.4rem; }
+
+.intro {
+  color: var(--soft);
+  max-width: 550px;
+  margin: 0 auto 25px;
+}
+
+.capa-bloco {
+  width: min(100%, 370px);
+  margin: auto;
+  text-align: center;
+  animation: flutuar 6s ease-in-out infinite;
+}
+
+.capa {
+  aspect-ratio: 4 / 5;
+  padding: 8px;
+  border: 1px solid #ff91b877;
+  border-radius: 190px 190px 25px 25px;
+  box-shadow: 0 0 0 8px #ff91b80b, 0 25px 70px #0005;
+  position: relative;
+}
+
+.capa::after {
+  content: "♡";
+  position: absolute;
+  right: -15px;
+  top: 25%;
+  color: var(--pink);
+  font-size: 2rem;
+  animation: pulsar 2s infinite;
+}
+
+.capa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+}
+
+.legenda-capa {
+  color: var(--pink);
+  font: italic 1.05rem Georgia, serif;
+  margin-top: 15px;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 11px 19px;
+  border: 1px solid var(--pink);
+  border-radius: 999px;
+  background: var(--pink);
+  color: #351222;
+  font-weight: 750;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.botao:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px #ff91b82b;
+}
+
+.botao:active { transform: scale(.97); }
+
+.botao.secundario {
+  background: transparent;
+  color: var(--text);
+}
+
+.titulo-secao {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.titulo-secao p { color: var(--soft); }
+
+.cartao {
+  padding: clamp(20px, 5vw, 38px);
+  border: 1px solid #ffffff1b;
+  border-radius: 23px;
+  background: linear-gradient(145deg, #35192a, #24101d);
+  box-shadow: 0 20px 55px #0002;
+}
+
+.carta {
+  font: 1.05rem/1.95 Georgia, serif;
+}
+
+.carta p { margin: 0 0 17px; }
+
+.assinatura {
+  color: var(--pink);
+  font-size: 1.2rem;
+}
+
+/* GALERIA */
+
+.galeria {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.foto {
+  margin: 0;
+  padding: 9px;
+  background: var(--panel);
+  border: 1px solid #ffffff1b;
+  border-radius: 20px;
+  cursor: zoom-in;
+  overflow: hidden;
+  transition: transform .3s, border-color .3s;
+}
+
+.foto:hover {
+  transform: translateY(-5px);
+  border-color: var(--pink);
+}
+
+.foto img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  display: block;
+  border-radius: 13px;
+  transition: transform .5s;
+}
+
+.foto:hover img { transform: scale(1.035); }
+
+.foto figcaption {
+  padding: 13px 5px 7px;
+  text-align: center;
+  color: var(--pink);
+  font: 1.05rem Georgia, serif;
+}
+
+.numero {
+  display: block;
+  color: var(--soft);
+  font: .7rem system-ui, sans-serif;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+/* MOTIVOS */
+
+.motivos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 13px;
+}
+
+.motivo {
+  padding: 22px;
+  border: 1px solid #ffffff18;
+  border-radius: 18px;
+  background: #ffffff08;
+  transition: transform .3s, background .3s;
+}
+
+.motivo:hover {
+  transform: translateY(-4px);
+  background: #ff91b812;
+}
+
+.motivo strong { color: var(--pink); }
+.motivo p { color: var(--soft); margin-bottom: 0; }
+.icone { font-size: 1.5rem; display: block; }
+
+/* QUIZ */
+
+.quiz {
+  max-width: 760px;
+  margin: auto;
+  text-align: center;
+}
+
+.quiz-topo {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--soft);
+  font-size: .85rem;
+  margin-bottom: 12px;
+}
+
+.barra {
+  height: 6px;
+  background: #ffffff15;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+#progresso {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--pink), var(--gold));
+  transition: width .4s;
+}
+
+.opcoes {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.opcoes button {
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  border: 1px solid #ffffff25;
+  border-radius: 14px;
+  color: var(--text);
+  background: #ffffff09;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.opcoes button:hover {
+  border-color: var(--pink);
+  background: #ff91b817;
+  transform: translateX(3px);
+}
+
+.opcoes button:disabled { cursor: default; }
+
+.opcoes button.correta {
+  border-color: #91e4b0;
+  background: #91e4b015;
+}
+
+.opcoes button.errada {
+  border-color: #ff91b8;
+  background: #ff91b815;
+}
+
+#resultado {
+  color: var(--pink);
+  min-height: 50px;
+  margin-top: 18px;
+}
+
+#premio {
+  display: none;
+  margin-top: 25px;
+}
+
+#premio.aberto {
+  display: block;
+  animation: entrada .6s both;
+}
+
+/* SURPRESA */
+
+.envelope {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 28px 20px;
+  border: 1px solid #ff91b877;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #472039, #281321);
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: 0 20px 50px #0003;
+  transition: transform .3s;
+}
+
+.envelope:hover { transform: translateY(-4px); }
+
+.selo {
+  display: block;
+  font-size: 3.2rem;
+  animation: pulsar 2s infinite;
+}
+
+#mensagemSecreta {
+  display: none;
+  max-width: 650px;
+  margin: 20px auto 0;
+}
+
+#mensagemSecreta.aberto {
+  display: block;
+  animation: entrada .6s both;
+}
+
+.final {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.coracao-grande {
+  color: var(--pink);
+  font-size: 4rem;
+  animation: pulsar 1.5s infinite;
+  line-height: 1.2;
+}
+
+footer {
+  padding: 25px 15px 40px;
+  text-align: center;
+  color: var(--soft);
+  border-top: 1px solid #ffffff15;
+  font-size: .85rem;
+}
+
+.coracao-flutuante {
+  position: fixed;
+  z-index: 40;
+  pointer-events: none;
+  animation: subir 3.5s ease-out forwards;
+}
+
+#topo {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 15;
+  width: 45px;
+  height: 45px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--pink);
+  color: #351222;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: .25s;
+}
+
+#topo.visivel {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+/* FOTO AMPLIADA */
+
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  background: #080308ed;
+}
+
+#lightbox.aberto { display: flex; }
+
+#lightbox img {
+  max-width: 95vw;
+  max-height: 85svh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+#fecharFoto {
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ffffff44;
+  border-radius: 50%;
+  background: #ffffff15;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ELEMENTOS ANIMADOS NA ROLAGEM */
+
+.revelar {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s, transform .7s;
+}
+
+.revelar.visivel {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes entrada {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulsar {
+  50% { transform: scale(1.12); }
+}
+
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+
+@keyframes subir {
+  0% { opacity: 0; transform: translateY(0) scale(.7); }
+  15% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-88vh) rotate(25deg) scale(1.5); }
+}
+
+@media (min-width: 650px) {
+  .hero {
+    grid-template-columns: 1.05fr .95fr;
+    gap: 45px;
+  }
+
+  .hero-texto { text-align: left; }
+  .intro { margin-left: 0; }
+  .botoes { justify-content: flex-start; }
+  .galeria { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .motivos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .foto img { height: 350px; }
+}
+
+@media (min-width: 900px) {
+  .galeria { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .foto img { height: 300px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+
+  .revelar { opacity: 1; transform: none; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <nav>
+    <div class="logo">A + G ♡</div>
+    <div class="links">
+      <a href="#carta">Carta</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#motivos">Nós</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#surpresa">Surpresa</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero container" id="inicio">
+    <div class="hero-texto">
+      <div class="etiqueta">Um cantinho só nosso</div>
+      <h1>Gabriella,<br><span>meu lugar favorito.</span></h1>
+      <p class="intro">
+        Entre tantos caminhos, gosto de pensar que a vida foi
+        generosa quando cruzou os nossos.
+      </p>
+      <div class="botoes">
+        <a class="botao" href="#carta">Leia sua mensagem ♡</a>
+        <button class="botao secundario" id="botaoCoracoes">Um carinho ♥</button>
+      </div>
+    </div>
+
+    <div class="capa-bloco">
+      <div class="capa">
+        <img src="imagens/principal.jpg"
+             alt="Foto de Antonio e Gabriella">
+      </div>
+      <div class="legenda-capa">Meu sorriso favorito é com você.</div>
+    </div>
+  </section>
+
+  <section id="carta">
+    <div class="container">
+      <div class="titulo-secao revelar">
+        <div class="etiqueta">Um pouco do que sinto</div>
+        <h2>Para você, Beh.</h2>
+        <p>Algumas coisas merecem ser ditas com calma.</p>
+      </div>
+
+      <article class="cartao carta revelar">
+        <p>Gabi,</p>
+        <p>
+          Gosto de ter você na minha vida. Gosto da sua companhia,
+          das nossas conversas e de como os momentos simples ficam
+          melhores quando estamos juntos.
+        </p>
+        <p>
+          Quero estar ao seu lado enquanto você corre atrás dos
+          seus objetivos, comemorar suas conquistas e te apoiar
+          quando as coisas ficarem difíceis. Torço de verdade pelo
+          seu crescimento e quero ver você conquistando o que deseja.
+        </p>
+        <p>
+          Não espero que tudo seja perfeito. Quero que a gente
+          construa algo leve, sincero e seguro — uma relação em que
+          os dois possam falar, aprender, rir e continuar escolhendo
+          estar juntos.
+        </p>
+        <p>
+          Obrigado por fazer parte dos meus dias.
+          <strong>Eu gosto muito de nós.</strong>
+        </p>
+        <p class="assinatura">Com carinho,<br>Antonio ♡</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="fotos">
+    <div class="container">
+      <div class="titulo-secao revelar">
+        <div class="etiqueta">Pequenos registros, grandes lembranças</div>
+        <h2>Nossa história em fotos.</h2>
+        <p>Toque em qualquer foto para ampliá-la.</p>
+      </div>
+
+      <div class="galeria">
+        <figure class="foto revelar">
+          <img src="imagens/WhatsApp Image 2026-10-26 at 11.59.06 (2).jpeg"
+               alt="Primeiro momento juntos" loading="lazy">
+          <figcaption><span class="numero">01 · Nossa história</span>Primeiro momento</figcaption>
+        </figure>
+
+        <figure class="foto revelar">
+          <img src="imagens/WhatsApp Image 2026-10-26 at 11.59.06 (8).jpeg"
+               alt="Um dia especial juntos" loading="lazy">
+          <figcaption><span class="numero">02 · Para guardar</span>Um dia especial</figcaption>
+        </figure>
+
+        <figure class="foto revelar">
+          <img src="imagens/WhatsApp Image 2026-10-26 at 11.59.06 (4).jpeg"
+               alt="Antonio e Gabriella juntos" loading="lazy">
+          <figcaption><span class="numero">03 · Meu lugar favorito</span>Minha companhia favorita</figcaption>
+        </figure>
+
+        <figure class="foto revelar">
+          <img src="imagens/WhatsApp Image 2026-10-26 at 11.59.06 (3).jpeg"
+               alt="Uma lembrança feliz do casal" loading="lazy">
+          <figcaption><span class="numero">04 · Um sorriso guardado</span>Uma lembrança feliz</figcaption>
+        </figure>
+
+        <figure class="foto revelar">
+          <img src="imagens/WhatsApp Image 2026-10-26 at 11.59.06 (5).jpeg"
+               alt="Um momento especial do casal" loading="lazy">
+          <figcaption><span class="numero">05 · Só nosso</span>Só a gente entende</figcaption>
+        </figure>
+
+        <figure class="foto revelar">
+          <img src="imagens/WhatsApp Image 2026-10-26 at 11.59.06 (7).jpeg"
+               alt="Mais um capítulo da história do casal" loading="lazy">
+          <figcaption><span class="numero">06 · E ainda vem muito mais</span>Mais um capítulo nosso</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="motivos">
+    <div class="container">
+      <div class="titulo-secao revelar">
+        <div class="etiqueta">O que eu admiro em você</div>
+        <h2>O que faz você ser você.</h2>
+      </div>
+
+      <div class="motivos">
+        <article class="motivo revelar">
+          <span class="icone">🌷</span>
+          <strong>Sua vontade de crescer</strong>
+          <p>Gosto de ver você buscando seus objetivos e torço por cada conquista sua.</p>
+        </article>
+        <article class="motivo revelar">
+          <span class="icone">✨</span>
+          <strong>Seu jeito único</strong>
+          <p>Quero que você possa ser você mesma, sem precisar esconder quem é.</p>
+        </article>
+        <article class="motivo revelar">
+          <span class="icone">☕</span>
+          <strong>Nossa companhia</strong>
+          <p>Até os programas mais simples ficam especiais quando estamos juntos.</p>
+        </article>
+        <article class="motivo revelar">
+          <span class="icone">🫶</span>
+          <strong>O que estamos construindo</strong>
+          <p>Gosto da ideia de crescer lado a lado, com respeito, parceria e leveza.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz">
+    <div class="container">
+      <div class="titulo-secao revelar">
+        <div class="etiqueta">Desafio oficial da Beh</div>
+        <h2>Quanto você me conhece?</h2>
+        <p>Responda às cinco perguntas. Tem uma surpresa no final.</p>
+      </div>
+
+      <div class="cartao quiz revelar">
+        <div class="quiz-topo">
+          <span id="contador">Pergunta 1 de 5</span>
+          <span id="pontuacao">♡ 0 pontos</span>
+        </div>
+
+        <div class="barra"><span id="progresso"></span></div>
+        <h3 id="pergunta"></h3>
+        <div class="opcoes" id="opcoes"></div>
+        <p id="resultado" aria-live="polite">Escolha uma resposta! 👀</p>
+
+        <div class="botoes">
+          <button class="botao" id="proxima" hidden>Próxima →</button>
+          <button class="botao secundario" id="reiniciar" hidden>Jogar novamente ↻</button>
+        </div>
+
+        <div id="premio">
+          <div class="cartao carta">
+            <p class="assinatura">🏆 Resultado oficial</p>
+            <p id="textoPremio"></p>
+            <p>
+              A resposta mais importante é essa:
+              gosto de estar com você e de tudo que ainda vamos viver.
+            </p>
+            <button class="botao" id="irSurpresa">Abrir a surpresa ♡</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="surpresa">
+    <div class="container">
+      <div class="titulo-secao revelar">
+        <div class="etiqueta">Psst... tem algo escondido</div>
+        <h2>Uma surpresa para você.</h2>
+        <p>Toque no envelope para descobrir o que está guardado.</p>
+      </div>
+
+      <button class="envelope revelar" id="envelope"
+              aria-expanded="false" aria-controls="mensagemSecreta">
+        <span class="selo">💌</span>
+        <strong id="textoEnvelope">Uma mensagem especialmente para você</strong>
+        <div id="instrucaoEnvelope">Toque para abrir</div>
+      </button>
+
+      <div id="mensagemSecreta" class="cartao carta">
+        <p>
+          Se você chegou até aqui, fica mais uma coisa:
+          não precisa ser um dia extraordinário para eu gostar
+          de estar com você.
+        </p>
+        <p>
+          Muitas vezes, é justamente a simplicidade dos nossos
+          momentos que eu mais quero guardar.
+        </p>
+        <p>
+          Quero continuar descobrindo você, rindo com você e
+          construindo algo bonito, sem pressa e sem deixar de ser nós mesmos.
+        </p>
+        <p class="assinatura">Ainda temos muita história pela frente. ❤️<br>— Antonio</p>
+        <button class="botao" id="chuvaFinal">Uma chuva de carinho ♥</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="container revelar">
+      <div class="coracao-grande">♡</div>
+      <h2>Gosto de nós, Gabi.</h2>
+      <p class="intro">
+        Que a gente continue escrevendo a nossa história,
+        um dia de cada vez.
+      </p>
+      <button class="botao" id="surpresaFinal">
+        Aperte quando sentir saudade ♥
+      </button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Feito com carinho para Gabriella · Antonio ♡<br>
+  Uma página, muitas lembranças e uma história que continua.
+</footer>
+
+<button id="topo" aria-label="Voltar ao início">↑</button>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button id="fecharFoto" aria-label="Fechar foto">×</button>
+  <img src="" alt="">
+</div>
+
+<script>
+(() => {
+  const $ = (seletor, raiz = document) => raiz.querySelector(seletor);
+  const $$ = (seletor, raiz = document) => [...raiz.querySelectorAll(seletor)];
+
+  // 1. Animações de entrada ao rolar a página
+  const elementos = $$('.revelar');
+
+  if ('IntersectionObserver' in window) {
+    const observador = new IntersectionObserver(entradas => {
+      entradas.forEach(entrada => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('visivel');
+          observador.unobserve(entrada.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    elementos.forEach(el => observador.observe(el));
+  } else {
+    elementos.forEach(el => el.classList.add('visivel'));
+  }
+
+  // 2. Botão de voltar ao topo
+  const topo = $('#topo');
+
+  window.addEventListener('scroll', () => {
+    topo.classList.toggle('visivel', window.scrollY > 450);
+  }, { passive: true });
+
+  topo.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // 3. Notificações discretas
+  let temporizadorToast;
+
+  function toast(mensagem) {
+    let elemento = $('#toast');
+
+    if (!elemento) {
+      elemento = document.createElement('div');
+      elemento.id = 'toast';
+      elemento.style.cssText =
+        'position:fixed;bottom:25px;left:50%;transform:translateX(-50%);' +
+        'z-index:60;background:#35192a;border:1px solid #ff91b877;' +
+        'border-radius:30px;padding:12px 18px;text-align:center;' +
+        'box-shadow:0 10px 35px #0006;max-width:90vw;color:#fff2f6;' +
+        'opacity:0;transition:opacity .3s;pointer-events:none';
+      document.body.appendChild(element);
+    }
+
+    elemento.textContent = mensagem;
+    elemento.style.opacity = '1';
+    clearTimeout(temporizadorToast);
+
+    temporizadorToast = setTimeout(() => {
+      elemento.style.opacity = '0';
+    }, 2600);
+  }
+
+  // 4. Chuva de corações
+  function soltarCoracoes(quantidade = 24) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const simbolos = ['♥', '♡', '💗', '💕', '✨'];
+
+    for (let i = 0; i < quantidade; i++) {
+      const coracao = document.createElement('span');
+
+      coracao.className = 'coracao-flutuante';
+      coracao.textContent =
+        simbolos[Math.floor(Math.random() * simbolos.length)];
+
+      coracao.style.left = Math.random() * 96 + 'vw';
+      coracao.style.bottom = '-30px';
+      coracao.style.fontSize = 16 + Math.random() * 22 + 'px';
+      coracao.style.animationDelay = Math.random() * 1.1 + 's';
+
+      document.body.appendChild(coracao);
+      setTimeout(() => coracao.remove(), 4700);
+    }
+  }
+
+  $('#botaoCoracoes').addEventListener('click', () => {
+    soltarCoracoes(24);
+    toast('Um carinho só seu, Beh. ♥');
+  });
+
+  $('#surpresaFinal').addEventListener('click', () => {
+    soltarCoracoes(50);
+    toast('Se eu pudesse, mandava um abraço junto. ❤️');
+  });
+
+  $('#chuvaFinal').addEventListener('click', () => {
+    soltarCoracoes(55);
+    toast('Envio entregue: muitos beijinhos. 💗');
+  });
+
+  // 5. Quiz personalizado
+  const perguntas = [
+    {
+      q: 'Qual desses planos eu escolheria com você?',
+      op: [
+        'Um lugar cheio de gente e barulho.',
+        'Um momento bom com você, sem precisar de muito.',
+        'Ficar olhando o relógio para ir embora.'
+      ],
+      c: 1,
+      certo: 'Acertou! O melhor é ter você por perto. ❤️',
+      errado: 'Quase! Para mim, o melhor é curtir sua companhia.'
+    },
+    {
+      q: 'O que eu mais quero ver você conquistando?',
+      op: [
+        'Seus próprios objetivos e sonhos.',
+        'Uma coleção de despertadores.',
+        'O recorde mundial de procrastinação.'
+      ],
+      c: 0,
+      certo: 'Isso! Eu torço de verdade pelo seu crescimento. 🌷',
+      errado: 'Quero ver você correndo atrás dos seus sonhos.'
+    },
+    {
+      q: 'O que deixa um dia comum mais especial?',
+      op: [
+        'Uma agenda lotada.',
+        'Fazer tudo com pressa.',
+        'Ter você comigo e aproveitar o momento.'
+      ],
+      c: 2,
+      certo: 'Exatamente. Às vezes, o simples é o melhor. ✨',
+      errado: 'Dica: tem a ver com companhia e aproveitar o agora.'
+    },
+    {
+      q: 'Como eu gostaria que fosse a nossa relação?',
+      op: [
+        'Uma competição para ver quem tem razão.',
+        'Leve, sincera, segura e cheia de parceria.',
+        'Uma relação sem conversa nenhuma.'
+      ],
+      c: 1,
+      certo: 'Perfeito! Quero que a gente cresça lado a lado. 🫶',
+      errado: 'Quero construir algo leve, com respeito e parceria.'
+    },
+    {
+      q: 'O que eu escolheria para os próximos capítulos?',
+      op: [
+        'Que a gente nunca precise conversar.',
+        'Que tudo seja perfeito o tempo inteiro.',
+        'Que a gente continue se escolhendo e construindo boas lembranças.'
+      ],
+      c: 2,
+      certo: 'Essa é a resposta! Ainda temos muita história pela frente. ❤️',
+      errado: 'Minha escolha é continuar construindo uma história bonita.'
+    }
+  ];
+
+  let atual = 0;
+  let pontos = 0;
+  let respondeu = false;
+
+  const perguntaEl = $('#pergunta');
+  const opcoesEl = $('#opcoes');
+  const resultadoEl = $('#resultado');
+  const proxima = $('#proxima');
+  const reiniciar = $('#reiniciar');
+  const premio = $('#premio');
+
+  function renderPergunta() {
+    respondeu = false;
+    const p = perguntas[atual];
+
+    $('#contador').textContent = `Pergunta ${atual + 1} de ${perguntas.length}`;
+    $('#pontuacao').textContent = `♡ ${pontos} ${pontos === 1 ? 'ponto' : 'pontos'}`;
+    $('#progresso').style.width = `${atual / perguntas.length * 100}%`;
+
+    perguntaEl.textContent = p.q;
+    opcoesEl.replaceChildren();
+
+    p.op.forEach((texto, indice) => {
+      const botao = document.createElement('button');
+      botao.type = 'button';
+      botao.textContent = texto;
+
+      botao.addEventListener('click', () => {
+        if (respondeu) return;
+
+        respondeu = true;
+        const acertou = indice === p.c;
+
+        if (acertou) pontos++;
+
+        $$('.opcoes button').forEach((b, i) => {
+          b.disabled = true;
+
+          if (i === p.c) b.classList.add('correta');
+          else if (i === indice) b.classList.add('errada');
+        });
+
+        resultadoEl.textContent = acertou ? p.certo : p.errado;
+
+        $('#pontuacao').textContent =
+          `♡ ${pontos} ${pontos === 1 ? 'ponto' : 'pontos'}`;
+
+        $('#progresso').style.width =
+          `${(atual + 1) / perguntas.length * 100}%`;
+
+        proxima.hidden = false;
+
+        if (acertou) soltarCoracoes(8);
+      });
+
+      opcoesEl.appendChild(botao);
+    });
+
+    resultadoEl.textContent = 'Escolha uma resposta, sem espiar! 👀';
+    proxima.hidden = true;
+    reiniciar.hidden = true;
+    premio.classList.remove('aberto');
+  }
+
+  proxima.addEventListener('click', () => {
+    if (atual < perguntas.length - 1) {
+      atual++;
+      renderPergunta();
+      return;
+    }
+
+    perguntaEl.textContent = 'Quiz concluído! 💌';
+    opcoesEl.replaceChildren();
+    resultadoEl.textContent = `Você fez ${pontos} de ${perguntas.length} pontos.`;
+
+    $('#contador').textContent = 'Desafio concluído';
+    $('#progresso').style.width = '100%';
+
+    $('#textoPremio').textContent =
+      pontos === 5
+        ? 'Gabaritou! Você me conhece muito bem — ou temos uma conexão perigosamente boa. ❤️'
+        : pontos >= 3
+          ? 'Mandou bem! Você já conhece vários pedacinhos de mim. O melhor é continuarmos descobrindo um ao outro.'
+          : 'Esse quiz merece uma revanche e mais momentos juntos para descobrir ainda mais sobre nós. ❤️';
+
+    premio.classList.add('aberto');
+    proxima.hidden = true;
+    reiniciar.hidden = false;
+
+    soltarCoracoes(pontos === 5 ? 35 : 18);
+  });
+
+  reiniciar.addEventListener('click', () => {
+    atual = 0;
+    pontos = 0;
+    renderPergunta();
+  });
+
+  $('#irSurpresa').addEventListener('click', () => {
+    $('#surpresa').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  renderPergunta();
+
+  // 6. Envelope com mensagem secreta
+  $('#envelope').addEventListener('click', () => {
+    const mensagem = $('#mensagemSecreta');
+    const aberta = mensagem.classList.toggle('aberto');
+
+    $('#envelope').setAttribute('aria-expanded', String(aberta));
+
+    $('#textoEnvelope').textContent = aberta
+      ? 'Mensagem aberta — guarde com carinho ♡'
+      : 'Uma mensagem especialmente para você';
+
+    $('#instrucaoEnvelope').textContent = aberta
+      ? 'Toque novamente para fechar'
+      : 'Toque para abrir';
+
+    if (aberta) soltarCoracoes(18);
+  });
+
+  // 7. Galeria com ampliação em tela cheia
+  const lightbox = $('#lightbox');
+  const imagemGrande = $('#lightbox img');
+
+  $$('.foto img').forEach(imagem => {
+    const figura = imagem.closest('.foto');
+
+    figura.tabIndex = 0;
+    figura.setAttribute('role', 'button');
+    figura.setAttribute('aria-label', 'Ampliar foto: ' + imagem.alt);
+
+    function abrirFoto() {
+      imagemGrande.src = imagem.src;
+      imagemGrande.alt = imagem.alt;
+      lightbox.classList.add('aberto');
+      document.body.style.overflow = 'hidden';
+      $('#fecharFoto').focus();
+    }
+
+    figura.addEventListener('click', abrirFoto);
+
+    figura.addEventListener('keydown', evento => {
+      if (evento.key === 'Enter' || evento.key === ' ') {
+        evento.preventDefault();
+        abrirFoto();
+      }
+    });
+  });
+
+  function fecharFoto() {
+    lightbox.classList.remove('aberto');
+    document.body.style.overflow = '';
+    imagemGrande.src = '';
+  }
+
+  $('#fecharFoto').addEventListener('click', fecharFoto);
+
+  lightbox.addEventListener('click', evento => {
+    if (evento.target === lightbox) fecharFoto();
+  });
+
+  document.addEventListener('keydown', evento => {
+    if (evento.key === 'Escape') fecharFoto();
+  });
+
+  // 8. Avisar se algum caminho de imagem estiver errado
+  $$('img').forEach(imagem => {
+    imagem.addEventListener('error', () => {
+      console.warn('Imagem não encontrada:', imagem.getAttribute('src'));
+    });
+  });
+})();
+</script>
+</body>
+</html>
